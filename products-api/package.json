@@ -1,0 +1,12 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "description": "API de gestión de productos con Express y SQLite",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

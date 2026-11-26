@@ -1,0 +1,21 @@
+# Bases de datos locales (se crean solas al iniciar cada API)
+*.db
+data/
+
+# Python
+__pycache__/
+.venv/
+
+# Node
+node_modules/
+
+# Java
+target/
+
+# Go
+orders-api/orders-api
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
