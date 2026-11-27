@@ -13,8 +13,8 @@ COPY src ./src
 RUN mvn -q package
 
 # ---------- Etapa 2: ejecutar ----------
-# Imagen solo con Java (JRE), sin Maven -> más liviana
-FROM eclipse-temurin:21-jre
+# Imagen solo con Java (JRE) sobre alpine, sin Maven -> más liviana
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 COPY --from=build /app/target/auth-api.jar .

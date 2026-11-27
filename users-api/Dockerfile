@@ -1,5 +1,5 @@
-# Imagen base de Python (versión liviana)
-FROM python:3.12-slim
+# Imagen base de Python (alpine = versión mínima)
+FROM python:3.12-alpine
 
 WORKDIR /app
 
@@ -16,5 +16,5 @@ RUN mkdir -p /app/data
 
 EXPOSE 8000
 
-# fastapi run = modo producción (fastapi dev es solo para desarrollo local)
-CMD ["fastapi", "run", "main.py", "--port", "8000"]
+# uvicorn es el servidor que ejecuta la app FastAPI ("main:app" = archivo main.py, variable app)
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

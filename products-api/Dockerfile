@@ -1,5 +1,5 @@
-# Imagen base de Node.js (versión liviana). Node 24 trae SQLite incluido (node:sqlite)
-FROM node:24-slim
+# Imagen base de Node.js (alpine = versión mínima). Node 24 trae SQLite incluido (node:sqlite)
+FROM node:24-alpine
 
 WORKDIR /app
 
